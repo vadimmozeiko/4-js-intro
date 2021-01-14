@@ -63,15 +63,16 @@ console.log('-------------------------');
 
 // 2.
 
-const tekstas = vardas + ' ' + pavarde + ' ' + gyvVieta;
+const tekstas = `${vardas} ${pavarde} ${gyvVieta}`;
 console.log(tekstas);
 
 console.log('-------------------------');
 
 // 3.
 
-const sarasoSuma = lyginiaiSkaiciai[0] - lyginiaiSkaiciai[1] + lyginiaiSkaiciai[2] - lyginiaiSkaiciai[3] + lyginiaiSkaiciai[4];
+const sarasoSuma = lyginiaiSkaiciai[0] - nelyginiaiSkaiciai[1] + lyginiaiSkaiciai[2] - nelyginiaiSkaiciai[3] + lyginiaiSkaiciai[4];
 console.log(sarasoSuma);
+
 
 console.log('-------------------------');
 
