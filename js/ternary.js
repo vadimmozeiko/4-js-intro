@@ -1,39 +1,40 @@
-const a = 4; 
-const b = 4;
+const a = 4; // inicijuojame konstanta su kintamojo reiksme 
+const b = 4; // inicijuojame konstanta su kintamojo reiksme
 
-const arLygu = a === b ? true : false;
+const arLygu = a === b ? true : false; // tikriname, jeigu a lygu b tuomet vykdo pirma reikme (true), jeigu ne - antra (false)
 
-console.log(arLygu);
-
-// ------------------------------------------
-
-const aukstai = 2;
-const kadaDaug = 5;
-const arDaug = aukstai >= kadaDaug ? 'taip' : 'ne';
-console.log(arDaug);
-
+console.log(arLygu); // isvedame rezultata i console
 
 // ------------------------------------------
 
-const variklisIsjungtas = false;
-const arJudam = variklisIsjungtas === true ? 'stovim' : 'vaziuojam' ;
+const aukstai = 2; // inicijuojame konstanta su kintamojo reiksme
+const kadaDaug = 5; // inicijuojame konstanta su kintamojo reiksme
+const arDaug = aukstai >= kadaDaug ? 'taip' : 'ne'; // tikriname, jeigu a lygu b tuomet vykdo pirma reikme (taip), jeigu ne - antra (ne)
+
+console.log(arDaug); // isvedame rezultata i console
+
+
+// ------------------------------------------
+
+const variklisIsjungtas = false;  // inicijuojame konstanta su kintamojo reiksme
+const arJudam = variklisIsjungtas === true ? 'stovim' : 'vaziuojam' ; // tikriname, jeigu a lygu b tuomet vykdo pirma reikme (stovim), jeigu ne - antra (vaziuojam)
 console.log(arJudam);
 
-let variklioBusena = ''
 
-if (variklisIsjungtas === true) {
-    variklioBusena = 'tai uzvesk varikli'
+let variklioBusena = '' // inicijuojame kintamaji kuriame saugosime atsakyma
+if (variklisIsjungtas === true) { // tinkriname at tenkinama salyga
+    variklioBusena = 'tai uzvesk varikli' // jeigu taip, vykdo sita
 } else {
-    variklioBusena = 'uzgesink varikli'
+    variklioBusena = 'uzgesink varikli' // jeigu ne, vykdo sita
 }
-console.log(variklioBusena);
+console.log(variklioBusena); // isvedame i console
 
-const arVaziuojame = variklisIsjungtas === true ? 'tai uzvesk varikli' : 'uzgesink varikli';
+const arVaziuojame = variklisIsjungtas === true ? 'tai uzvesk varikli' : 'uzgesink varikli'; // tikriname, jeigu a lygu b tuomet vykdo pirma reikme (uzvesk varikli), jeigu ne - antra (uzgesink varikli)
 console.log(arVaziuojame);
 
 console.log('----------TERNARY------------');
 
-// Usign ternary, if and switch
+// Naudojame ternary, if, switch
 
 const noFuel = true; // true,false
 const fuelType = ''; // petrol, diesel

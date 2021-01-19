@@ -441,21 +441,178 @@ console.log('-------------------------');
 
 // console.log(tekstasX, '->', tekstasY);
 
-// 3 Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai
+// 3 Suskaičiuoti, kiek nurodytame intervale (0-11, 8-31, -18-15) yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai
 
 // a)
 
-const from = 0;
-const till = 11;
-const divider = 5;
+// const from = 0;
+// const till = 10;
+// const divider = 3;
 
-let count = 0;
+// let count = 0;
 
-for (let i = from; i <= till; i++) {
-    if (i % divider === 0) {
-        count++
-    }   
-}
-const ats = `Skaičių intervale tarp ${from} ir ${till}, besidalijančių be liekanos iš ${divider} yra ${count} vienetai.`
+// for (let i = from; i <= till; i++) {
+//     if (i % divider === 0) {
+//         count++
+//     }   
+// }
+// const ats = `Skaičių intervale tarp ${from} ir ${till}, besidalijančių be liekanos iš ${divider} yra ${count} vienetai.`
 
-console.log(ats);
+// console.log(ats);
+
+
+// const pr = 0;
+// const pab = 100;
+// const daliklis = 3;
+
+// let skaiciuoti = 0;
+
+// for (let i = pr; i <= pab; i++) {
+//     if (i % daliklis === 0) {
+//         skaiciuoti = skaiciuoti + 1; // arba skaiciuoti++
+//     } else if(daliklis === 0) {
+//         console.log('Dalyba is nulio negalima');
+//     }
+// }
+
+// console.log(skaiciuoti);
+
+
+
+// Funkcijos function panaudojimas -----------------------
+
+
+// 1. Funkcija pavadinimu “tusciaFunkcija”
+
+ function tusciaFunkcija() {
+     return false;
+ }
+
+ console.log(tusciaFunkcija());
+
+ // 2. Funkcija pavadinimu “daugyba”
+
+ function daugyba(sk1, sk2) {
+     const ats = sk1 * sk2;
+     return ats;
+ }
+
+console.log(daugyba(2, 3));
+console.log(daugyba(4, 3));
+console.log(daugyba(2, 4));
+
+console.log('-------------------------');
+
+
+function skaitmenuKiekisSkaiciuje(sk3) {
+    if (typeof sk3 !== 'number') {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    } else if (isNaN(sk3)) { //arba !isFinite(sk3) kuris tikrina ir Infinite!
+        return 'Pateikta netinkamo tipo reikšmė.';
+    } 
+    const ilgis = sk3.toString().length; // arba '' + sk3;
+    return ilgis;
+};
+
+console.log(skaitmenuKiekisSkaiciuje(5));
+console.log(skaitmenuKiekisSkaiciuje(781));
+console.log(skaitmenuKiekisSkaiciuje(37060123456));
+console.log(skaitmenuKiekisSkaiciuje(true));
+console.log(skaitmenuKiekisSkaiciuje("asd"));
+console.log(skaitmenuKiekisSkaiciuje(NaN));
+console.log(skaitmenuKiekisSkaiciuje(NaN));
+
+console.log('-------------------------');
+
+// 4. Funkcija pavadinimu “didziausiasSkaiciusSarase”
+
+function didziausiasSkaiciusSarase(sr1) {
+    if (!Array.isArray(sr1)) {
+        return 'Pateikta netinkamo tipo saraso reikšmė.'
+    }
+    if (sr1.length === 0) {
+        return 'Pateiktas sąrašas negali būti tuščias'
+    }
+    let rezultatas = sr1[0];
+    for (let i = 0; i < sr1.length; i++) {
+        if (rezultatas < sr1[i]) {
+            rezultatas = sr1[i];
+        }
+    } return rezultatas;
+    
+};
+
+console.log( didziausiasSkaiciusSarase([1]));
+console.log( didziausiasSkaiciusSarase([1, 2, 3]));
+console.log( didziausiasSkaiciusSarase([-5, 78, 14, 0, 18]));
+console.log( didziausiasSkaiciusSarase([69, 69, 69, 69, 66]));
+console.log( didziausiasSkaiciusSarase([-1, -2, -3, -4, -5, -6, -7, -8]));
+console.log( didziausiasSkaiciusSarase('pomidoras'));
+console.log( didziausiasSkaiciusSarase([]));
+
+console.log('-------------------------');
+
+
+// 5. Funkcija pavadinimu “isrinktiRaides”
+
+function isrinktiRaides(xx, xy) {
+    if (typeof xx !== 'string') {
+        return 'Pirmasis kintamasis yra netinkamo tipo';
+    } else if (xx.length === 0) {
+        return 'Pirmojo kintamojo reikšmė yra netinkamo dydžio';
+    } else if (xx.length > 100) {
+        return 'Pirmojo kintamojo reikšmė yra netinkamo dydžio';
+    }
+    if (typeof xy !== 'number') {
+        return 'Antrojo Antrasis kintamasis yra netinkamo tipo';
+    } else if (xy <= 0) {
+        return 'Antrasis kintamasis turi būti didesnis už nulį';
+    } else if (xy > xx.length) {
+        return 'Antrasis kintamasis turi būti ne didesnis už pateikto teksto ilgį';
+    } 
+    let rezultatas = '';
+    for (let i = xy - 1 ; i < xx.length; i += xy){
+         rezultatas += xx[i];  
+    }
+    return rezultatas;
+};
+
+console.log(isrinktiRaides('abcdefg', 2));
+console.log(isrinktiRaides('abcdefg', 1));
+console.log(isrinktiRaides('abcdefghijkl', 3));
+console.log(isrinktiRaides('abc', 0));
+console.log(isrinktiRaides('abc', 4));
+console.log(isrinktiRaides(1561, 2));
+
+
+console.log('-------------------------');
+
+// 6.Funkcija pavadinimu “dalyba”
+
+function dalyba(x1, x2) {
+    if (typeof x1 !== 'number') {
+        return 'Kitamasis turi buti skaicius';
+    } else if (typeof x2 !== 'number'){
+        return 'Kitamasis turi buti skaicius';
+    } else if (x2 === 0) {
+        return 'Antras kintamasis neturi buti nulis';
+    } else if (Number.isNaN(x1)){
+        return "Pirmas kintamasis negali buti NaN";
+    } else if (Number.isNaN(x2)){
+        return "Antras kintamasis negali buti NaN";
+    }
+    rezultatas = x1 / x2;
+    return rezultatas;
+};
+
+
+console.log(dalyba(0, 0));
+console.log(dalyba(0, 4));
+console.log(dalyba(4, 0));
+console.log(dalyba(NaN, 2));
+console.log(dalyba(2, NaN));
+console.log(dalyba(2, false));
+console.log(dalyba(false, false));
+console.log(dalyba('lol', 4 ));
+console.log(dalyba(4, 'lol' ));
+console.log(dalyba('lol', 'lol'));

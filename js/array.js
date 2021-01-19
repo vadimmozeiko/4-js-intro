@@ -4,19 +4,19 @@ Array - bet kokiu elementu sarasas(prioritetas, to paties tipo elementai)
 
 */
 
-const tusciaPinigine = [];
-console.log(tusciaPinigine); 
+const tusciaPinigine = []; // priskiriame tuscia sarasa
+console.log(tusciaPinigine); //isvedame i console
 
-const pinigine = [1, 2, 5, 10, 20];
-console.log(pinigine);
+const pinigine = [1, 2, 5, 10, 20]; // priskiriame sarasui skaiciaus reiksmes
+console.log(pinigine); // isvedame
 
-const abc = ['a', 'b', 'c', 'd', 'e', 'f'];
-console.log(abc);
+const abc = ['a', 'b', 'c', 'd', 'e', 'f']; // priskiriame raides kaip teksta
+console.log(abc); // isvedame
 
-const aplankytiMiestai = ['Vilnius', 'Kaunas', 'Klaipeda'];
-console.log(aplankytiMiestai);
+const aplankytiMiestai = ['Vilnius', 'Kaunas', 'Klaipeda']; // priskiriame zodzius
+console.log(aplankytiMiestai); // isvedame
 
-// kiek sarase yra reiksmiu: array.length
+// kiek sarase yra reiksmiu (saraso ilgis): array.length
 console.log('Kiek yra reiksmiu tusciame sarase', tusciaPinigine.length);
 console.log('Kiek yra reiksmiu pinigineje', pinigine.length);
 console.log('Kiek yra reiksmiu abeceleje', abc.length);
@@ -32,7 +32,7 @@ console.log('Labas rytas', 'Labas rytas!'.length);
 
 //istraukti saraso reikme 
 
-const pirmasMiestas = aplankytiMiestai[0];
+const pirmasMiestas = aplankytiMiestai[0]; // priskiriame pasirinkta saraso elementa 'array[x]'
 console.log('Pirmas miestas', pirmasMiestas);
 
 const antrasMiestas = aplankytiMiestai[1];

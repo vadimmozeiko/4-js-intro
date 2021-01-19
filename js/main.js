@@ -73,16 +73,16 @@ console.log('---------------------------------');
 let pinigine = 0;
 
 const pirmaAlga = 100;
-pinigine = pinigine + pirmaAlga;
+pinigine = pinigine + pirmaAlga; // issaugome pirmaAlga reiksme i pinigine
 console.log('Turiu pinigu:', pinigine);
 
 const antraAlga = 300;
-pinigine = pinigine + antraAlga;
+pinigine = pinigine + antraAlga; // issaugome antraAlga reiksme i pinigine
 console.log('Turiu pinigu:', pinigine);
 
 const treciaAlga = 450;
-pinigine = pinigine + treciaAlga;
-console.log('Turiu pinigu:', pinigine);
+pinigine = pinigine + treciaAlga; // issaugome treciaAlga reiksme i pinigine
+console.log('Turiu pinigu:', pinigine); // isvedame pinigine reikme i console
 
 console.log('---------------------------------');
 //---------------------------------------------
@@ -90,10 +90,10 @@ console.log('---------------------------------');
 const s1 = 2;
 const s2 = 4;
 
-console.log(s1 + s2);
-console.log(s1 - s2);
-console.log(s1 * s2);
-console.log(s1 / s2);
+console.log(s1 + s2); // sudetis
+console.log(s1 - s2); // atimtis
+console.log(s1 * s2); // daugyba
+console.log(s1 / s2); // dalyba
 console.log(s1 ** s2); // kelimas laipsniu (s2)
 console.log((2 + 2) * 2); // operaciju eiliskumas (prioritetai)
 

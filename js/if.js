@@ -21,28 +21,31 @@ SABLONAI
 
 if () {}
 if () {} else {}
-if () {} else if {}.... else if{}... else if{}
-if () {} else if {}.... else if{}... else {if {} else{}}
+if () {} else if {} .... else if () {}
+if () {} else if {} .... else if () {} else {}
 
 
 */
 
-const a = 4;
-const b = 2;
+const a = 4; //inicijuojame konstanta
+const b = '2'; //inicijuojame konstanta
 
-if (a > b){
-    console.log ('taip')
+const c = +b; // konvetuojame string to number
+console.log(c);
+
+if (a > c){ // lyginame pagal nurodyta salyga
+    console.log ('taip') // jeigu salyga tenkinama, vykdo sita 
 } else {
-    console.log('ne');
+    console.log('ne'); // jeigu salyga netenkinama, vykdo sita
 }
 
 // if gali buti ir be "else"
-if (a <= b){
+if (a <= c){
     console.log ('taip')
 }
 
 // 
-if (a === b){
+if (a === c){
     console.log ('taip')
 } else {
     console.log('ne');
@@ -60,13 +63,19 @@ if (spalva ==='raudona') {
 
 
 
-// Su papildomu patirinimu (jei ne raudona, tai gal melyna? ir taip iki begalybes)
-if (spalva ==='raudona') {
-    console.log('Ryski');
-} else if (spalva === 'melyna') {
-    console.log('Kitokia');
-}else {
-    console.log('Nieko nezinau');
+// Su papildomu patikrinimu (jei ne raudona, tai gal melyna? ir taip iki begalybes)
+const spalva = 'raudonos';
+
+if (spalva === 'melyna') { // sulygina nurodyta teksta su konstanta 'spalva'
+    console.log('Arijai!'); // jeigu tenkina vykdo
+} else if (spalva === 'zalia') { // jeigu netenkita pirma salyga tikrina galbut sita tenkina (patikrink gal sita?)
+    console.log('Gerai slepiasi zolej 🦗');
+} else if (spalva === 'rudos') { // jeigu netenkina antra salyga, tikrina galbut sita tenkina (patikrink gal sita?)
+    console.log('Angry bird 😬😬');
+} else if (spalva === 'raudonos') { // jeigu netenkina trecia salyga, tikrina galbut sita tenkina (patikrink gal sita?)
+    console.log('Turbut programuotojas... 💻🐱‍👤');
+} else {
+    console.log('A tu turi akis? 👀👀👀'); // jeigu netenkina nei viena salyga, vykdo sita
 }
 
 
@@ -88,7 +97,7 @@ if (moneta === 'skaicius') {
     }
 }
 
-// if (){if{else if{else}}else if{if()}} else {if{} else{}}
+// 
 
 const namoTipas = 'namas';          // namas, butas
 const kaipKilti = 'laiptai';        // laiptai, liftas
