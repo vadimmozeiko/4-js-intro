@@ -2,7 +2,7 @@
 
 
 # JS - intro
-_Introduction to Javascrips_
+_Introduction to Javascript_
 
 This is mainly to learn basic Javascript structrure, commands, elements if, for and functions
 
